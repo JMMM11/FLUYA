@@ -49,7 +49,69 @@
 }
 
 .logo {
-  max-width: 320px;
+  display: grid;
+  gap: var(--s-3);
+  align-content: center;
+  max-width: 360px;
+  margin: 0;
+  padding: var(--s-6);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-tarjeta);
+  background: var(--superficie);
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.logo figcaption {
+  color: var(--texto-suave);
+  font-size: var(--t-sm);
+  text-align: center;
+}
+
+/* El símbolo y su significado, sobre el patrón de corrientes */
+.marca {
+  margin-top: var(--s-6);
+  background:
+    linear-gradient(rgb(245 241 232 / 0.65), rgb(245 241 232 / 0.65)),
+    url('../assets/marca/patron-corriente.svg') center / cover no-repeat;
+}
+
+.rejillaMarca {
+  display: grid;
+  gap: var(--s-6);
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .rejillaMarca {
+    grid-template-columns: minmax(160px, 280px) 1fr;
+  }
+}
+
+.simbolo {
+  width: min(100%, 240px);
+  height: auto;
+  padding: var(--s-5);
+  border-radius: var(--radio-tarjeta);
+  background: var(--superficie);
+}
+
+.significado {
+  display: grid;
+  gap: var(--s-4);
+  margin-top: var(--s-5);
+  padding-left: 1.25rem;
+}
+
+.significado h3 {
+  font-size: var(--t-lg);
+}
+
+.significado p {
+  color: var(--texto-suave);
 }
 
 .aliados {

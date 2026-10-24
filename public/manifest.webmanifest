@@ -1,0 +1,10 @@
+{
+  "name": "FLUYA: tu comunidad, informada a tiempo",
+  "short_name": "FLUYA",
+  "lang": "es-PA",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#174e4a",
+  "icons": [{ "src": "icono-app.png", "sizes": "600x600", "type": "image/png", "purpose": "any" }]
+}

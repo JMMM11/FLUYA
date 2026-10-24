@@ -1,9 +1,17 @@
 import { ALIADOS, EQUIPO } from '../data/secciones.js';
 import { SITIO } from '../data/sitio.js';
 import CabeceraPagina from '../components/ui/CabeceraPagina.jsx';
-import EspacioCanva from '../components/ui/EspacioCanva.jsx';
+import logoVertical from '../assets/marca/logo-vertical.svg';
+import simbolo from '../assets/marca/simbolo.svg';
 import { Escalonado, ItemEscalonado } from '../components/ui/Escalonado.jsx';
 import css from './Nosotros.module.css';
+
+// Del manual de marca: qué significa el símbolo.
+const SIGNIFICADO = [
+  { titulo: 'Dos corrientes', texto: 'Dos vecinos distintos que confirman lo mismo.' },
+  { titulo: 'Se unen en una sola', texto: 'La información confirmada sigue su curso hacia toda la comunidad.' },
+  { titulo: 'El punto coral', texto: 'El reporte. Visto completo, el símbolo es una persona con los brazos en alto, y también la Y de FLUYA.' },
+];
 
 export default function Nosotros() {
   return (
@@ -33,7 +41,29 @@ export default function Nosotros() {
               ))}
             </Escalonado>
           </div>
-          <EspacioCanva pieza="Logo de FLUYA" responsable="Josh Amaya" proporcion="1 / 1" className={css.logo} />
+          <figure className={css.logo}>
+            <img src={logoVertical} alt="Logo de FLUYA" width="706" height="426" />
+            <figcaption>Identidad visual: Josh Amaya.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section className={`seccion ${css.marca}`} aria-labelledby="simbolo">
+        <div className={`contenedor ${css.rejillaMarca}`}>
+          <img src={simbolo} alt="" width="240" height="240" className={css.simbolo} />
+          <div>
+            <h2 id="simbolo" className="titulo-seccion">
+              La confluencia: dos corrientes que se vuelven una
+            </h2>
+            <ol className={css.significado}>
+              {SIGNIFICADO.map((s) => (
+                <li key={s.titulo}>
+                  <h3>{s.titulo}</h3>
+                  <p>{s.texto}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
