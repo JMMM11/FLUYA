@@ -1,0 +1,130 @@
+.infografia {
+  display: grid;
+  gap: var(--s-4);
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-tarjeta);
+  background:
+    linear-gradient(rgb(251 249 244 / 0.82), rgb(251 249 244 / 0.82)),
+    url('../../assets/marca/patron-corriente.svg') center / cover no-repeat;
+}
+
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+}
+
+.titulo {
+  font-family: var(--font-titulo);
+  font-size: var(--t-xl);
+  font-weight: 700;
+  color: var(--comunidad);
+}
+
+.dibujo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.cauce path,
+.corriente path {
+  fill: none;
+  stroke-width: 22;
+  stroke-linecap: round;
+}
+
+.cauce path {
+  stroke: var(--superficie-2);
+}
+
+.corriente path {
+  stroke: var(--comunidad);
+}
+
+.reporte {
+  fill: var(--accion);
+}
+
+.vecino {
+  fill: var(--superficie);
+  stroke: var(--comunidad);
+  stroke-width: 4;
+}
+
+.check {
+  color: var(--comunidad);
+}
+
+.sello {
+  fill: var(--comunidad);
+}
+
+.selloIcono {
+  color: var(--comunidad-sobre);
+}
+
+.explicacion {
+  min-height: 5.5em;
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+.cuenta {
+  margin-bottom: var(--s-1);
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--s-1);
+}
+
+.paso {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  width: 100%;
+  min-height: 56px;
+  padding: var(--s-2) 2px;
+  border: 0;
+  border-radius: var(--radio-chico);
+  background: none;
+  color: var(--texto-suave);
+  font: inherit;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.paso[aria-current='step'] {
+  color: var(--comunidad-sobre);
+}
+
+.marca {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--comunidad);
+}
+
+.numero {
+  font-family: var(--font-titulo);
+  font-weight: 800;
+}
+
+.nombrePaso {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  text-align: center;
+}

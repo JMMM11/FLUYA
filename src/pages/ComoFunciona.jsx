@@ -5,7 +5,7 @@ import { SITIO } from '../data/sitio.js';
 import { ICONO_NIVEL } from '../components/iconos.js';
 import CabeceraPagina from '../components/ui/CabeceraPagina.jsx';
 import Carrusel from '../components/ui/Carrusel.jsx';
-import EspacioCanva from '../components/ui/EspacioCanva.jsx';
+import InfografiaSemaforo from '../components/inicio/InfografiaSemaforo.jsx';
 import { Escalonado, ItemEscalonado } from '../components/ui/Escalonado.jsx';
 import css from './ComoFunciona.module.css';
 
@@ -92,7 +92,7 @@ export default function ComoFunciona() {
             <p className={css.frase}>{SITIO.ideaClave}</p>
             <p className={css.aviso}>{SITIO.aviso}</p>
           </div>
-          <EspacioCanva pieza="Infografía del semáforo" responsable="Josh Amaya" proporcion="4 / 5" />
+          <InfografiaSemaforo />
         </div>
       </section>
     </>

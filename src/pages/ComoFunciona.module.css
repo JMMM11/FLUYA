@@ -21,7 +21,7 @@
 .nivel[data-nivel='1'] { --fg: var(--s1-fg); --bg-nivel: var(--s1-bg); }
 .nivel[data-nivel='2'] { --fg: var(--s2-fg); --bg-nivel: var(--s2-bg); }
 .nivel[data-nivel='3'] { --fg: var(--s3-fg); --bg-nivel: var(--s3-bg); }
-.nivel[data-nivel='4'] { --fg: var(--s4-fg); --bg-nivel: var(--s4-bg); }
+.nivel[data-nivel='4'] { --fg: var(--s4-sobre); --bg-nivel: var(--s4-bg); color: var(--s4-sobre); }
 
 .visual {
   display: flex;
